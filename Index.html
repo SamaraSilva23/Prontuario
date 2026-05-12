@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet"
   href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+  
 </head>
 
 <body>
 
-  <!-- SIDEBAR -->
   <div class="sidebar">
 
     <div class="logo">
@@ -66,23 +66,25 @@
           <div>
 
             <label>Nome Social</label>
-            <input type="text">
+            <input type="text" id="nome">
 
-            <label>Nome Civil</label>
-            <input type="text">
+            <label>Nome Civil(Opcional)</label>
+            <input type="text" id="nomeCivil">
 
             <label>Pronome</label>
-            <input type="text">
+            <input type="text" id="pronome">
 
             <label>Idade</label>
-            <input type="number">
+            <input type="number" id="idade">
 
-            <div class="buttons">
-              <label>Identidade de Gênero</label>      
-              <button>Mulher trans</button>
-              <button>Homem trans</button>
-              <button>Não-binário</button>
-              <button>Outro</button>
+             
+              <label>Identidade de Gênero</label>
+
+              <div class="buttons" id="identidadeGenero">
+              <button type="button" class="btn-select">Mulher trans</button>
+              <button type="button" class="btn-select">Homem trans</button>
+              <button type="button" class="btn-select">Não-binário</button>
+              <button type="button" class="btn-select">Outro</button>
             </div>
 
           </div>
@@ -90,16 +92,16 @@
           <div>
 
             <label>Contato</label>
-            <input type="text">
+            <input type="text" id="contato">
 
             <label>Profissional responsável</label>
-            <input type="text">
+            <input type="text" id="profissional">
 
             <label>Data da Consulta</label>
-            <input type="date">
+            <input type="date" id="dataConsulta">
 
             <label>Próxima Consulta</label>
-            <input type="date">
+            <input type="date" id="proximaConsulta">
 
           </div>
 
@@ -113,71 +115,117 @@
         <h2>Histórico</h2>
 
         <!-- QUEIXA -->
-        <div class="section">
+        <div class="section" >
           <h2>2 - Queixa Principal</h2>
-          <textarea></textarea>
+          <textarea id="queixaPrincipal" ></textarea>
         </div>
 
         <!-- HDA -->
-        <div class="section">
-          <h2>3 - História da Doença Atual</h2>
-          <textarea></textarea>
+        <div class="section" >
+          <h2>3 - História da Doença Atual (HDA)</h2>
+          <textarea id="hda"></textarea>
         </div>
 
         <!-- HISTÓRIA CLÍNICA -->
         <div class="section">
 
-          <h2>4 - História Clínica</h2>
+          <h2>4 - História Pessoal e Clínica</h2>
 
           <div class="grid-2">
 
             <div>
 
               <label>Tempo de Hormonioterapia</label>
-              <input type="text">
+              <input type="text" id="tempoHormonioterapia">
 
               <label>Tipo</label>
 
-              <div class="buttons">
-                <button>Estrogênica</button>
-                <button>Androgênica</button>
-                <button>Bloqueadores</button>
+              <div class="buttons" id="tipoHormonioterapia">
+                <button type="button" class="btn-select">Estrogênica</button>
+                <button type="button" class="btn-select">Androgênica</button>
+                <button type="button" class="btn-select">Bloqueadores</button>
+		            <button type="button" class="btn-select">Outros</button>
               </div>
 
-              <label>Administração</label>
+              <label>Via de Administração</label>
 
-              <div class="buttons">
-                <button>Oral</button>
-                <button>IM</button>
-                <button>Transdérmica</button>
-                <button>SC</button>
+              <div class="buttons" id="viaAdministracao">
+                <button type="button" class="btn-select">Oral</button>
+                <button type="button" class="btn-select">IM</button>
+                <button type="button" class="btn-select">Transdérmica</button>
+                <button type="button" class="btn-select">SC</button>
               </div>
 
-              <label>Dose</label>
-              <input type="text">
+              <label>Dose Atual</label>
+              <input type="text" id="doseAtual">
 	
 	     <label>Queixas Relacionadas</label>
 
-              <div class="buttons">
-                <button>Acne</button>
-                <button>Queda de cabelo</button>
-                <button>Retenção hídrica</button>
-                <button>Alteração de humor</button>
-		<button>Libido Alterada</button>
+              <div class="buttons" id="queixasRelacionadas">
+                <button type="button" class="btn-select">Acne</button>
+                <button type="button" class="btn-select">Queda de cabelo</button>
+                <button type="button" class="btn-select">Retenção hídrica</button>
+                <button type="button" class="btn-select">Alteração de humor</button>
+		            <button type="button" class="btn-select">Libido Alterada</button>
               </div>
 
+	     <label>Cirurgia de redesignação sexual</label>
+
+             <div class="linha-check">
+             <div class="linha-topo">
+
+             <label class="check" >
+             <input type="checkbox" id="cirurgiaRedesignacaoSim">
+             Sim</label>
+             <span>tipo:</span>
+
+             <input type="text" class="input-mini" id="tipoCirurgiaRedesignacao">
+             </div>
+
+             <div class="linha-baixo">
+
+             <label class="check" >
+             <input type="checkbox" id="cirurgiaRedesignacaoNao">
+             Não</label>
+             <span>intenção futura:</span>
+
+             <label class="check" >
+             <input type="checkbox" id="cirurgiaRedesignacaoIntencao">
+             Sim
+             </label>
+
+             <label class="check" >
+             <input type="checkbox" id="cirurgiaRedesignacaoIntencaoNao">
+             Não
+             </label>
+
+             </div>
+            </div>
+
+              <label>Procedimentos Prévios</label>
+              <div class="buttons" id="procedimentosPrevios">
+                <button type="button" class="btn-select">Mastectomia</button>
+                <button type="button" class="btn-select">Mamoplastia</button>
+                <button type="button" class="btn-select">Histerectomia</button>
+                <button type="button" class="btn-select">Ooforectomia</button>
+		            <button type="button" class="btn-select">Panectomia</button>
+                <button type="button" class="btn-select">Vaginoplastia</button>
+              </div>
 
               <label>Doenças Associadas</label>
-              <div class="buttons">
-                <button>Hepatopatia</button>
-                <button>Trombose</button>
-                <button>Hipertenção</button>
-                <button>Diabetes</button>
-		<button>Dislipidemia</button>
-              </div>
+              <div class="buttons" id="doencasAssociadas">
+                <button type="button" class="btn-select">Hepatopatia</button>
+                <button type="button" class="btn-select">Trombose</button>
+                <button type="button" class="btn-select">Hipertenção</button>
+                <button type="button" class="btn-select">Diabetes</button>
+		            <button type="button" class="btn-select">Dislipidemia</button>
+              </div> 
+
+              <label>Histórico familiar</label>
+              <input type="text" id="historicoFamiliar">
 
               <label>Alergias</label>
-              <input type="text">
+              <input type="text" id="alergias">
 
             </div>
 
@@ -188,7 +236,7 @@
         <!-- SAÚDE SEXUAL -->
         <div class="section">
 
-          <h2>5 - Saúde Sexual</h2>
+          <h2>5 - Investigação Sexual e Reprodutiva</h2>
 
           <div class="grid-2">
 
@@ -196,42 +244,146 @@
 
               <label>Atividade sexual</label>
 
-              <div class="buttons">
-                <button>Sim</button>
-                <button>Não</button>
+              <div class="buttons" id="atividadeSexual">
+                <button type="button" class="btn-select">Sim</button>
+                <button type="button" class="btn-select">Não</button>
               </div>
 
-              <label>Número de parceiros</label>
-              <input type="number">
+              <label>Número de parceiros(as) nos últimos 12 meses</label>
+              <input type="number" id="numeroParceiros">
+
+              <label>Tipo(s) de parceira(s)</label>
+
+              <div class="buttons" id="tipoParceira">
+                <button type="button" class="btn-select">Fixa</button>
+                <button type="button" class="btn-select">Ocasional</button>
+                <button type="button" class="btn-select">Múltipla</button>
+              </div>
+
 
               <label>Uso de preservativo</label>
 
-              <div class="buttons">
-                <button>Sempre</button>
-                <button>Nunca</button>
-		<button>Ás vezes</button>
+              <div class="buttons" id="usoPreservativo">
+                <button type="button" class="btn-select">Sempre</button>
+                <button type="button" class="btn-select">Ás vezes</button>
+                <button type="button" class="btn-select">Nunca</button>
               </div>
+
+	     <label>Historico de ISTs</label>
+
+              <div class="buttons ist-group" id="historicoISTs">
+                <button type="button" class="btn-select">Sim</button>
+                <button type="button" class="btn-select">Não</button>
+                <button type="button" class="btn-select">Quais</button>
+                <input type="text" class="input-ist" id="quaisISTs">
+              </div>
+              
+              <label>Desejo reprodutivo atual</label>
+
+              <div class="buttons" id="desejoReprodutivo">
+                <button type="button" class="btn-select">Sim</button>
+                <button type="button" class="btn-select">Não</button>
+                <button type="button" class="btn-select">Em dúvida</button>
+              </div>
+
+              <label>Planejameno reprodutivo realizado</label>
+
+              <div class="buttons" id="planejamentoReprodutivo">
+                <button type="button" class="btn-select">Sim</button>
+                <button type="button" class="btn-select">Não</button>
+              </div>
+
+              <label>Acesso a Serviços de saúde sexual e reprodutiva</label>
+
+              <div class="buttons" id="acessoServicosSaude">
+                <button type="button" class="btn-select">Sim</button>
+                <button type="button" class="btn-select">Não</button>
+              </div>
+
+              <label>Orientações recebidas</label>
+              <input type="text" id="orientacoesRecebidas">
+
 
             </div>
 
           </div>
 
         </div>
+        
+        
+<div class="section" id="usoMedicações">
+
+        <h2>6 - Uso de Medicações</h2>
+
+        <div class="med-row">
+        <label>Hormonioterapia</label>
+        <input type="text" placeholder="Ex: 2 anos" id="hormonioterapia">
+        <input type="text" placeholder="Observações" id="observacoesHormonioterapia">
+        </div>
+
+        <div class="med-row">
+        <label>Antidepressivos</label>
+        <input type="text" id="antidepressivos">
+        <input type="text" id="observacoesAntidepressivos">
+        </div>
+
+        <div class="med-row">
+        <label>Anti-hipertensivos</label>
+        <input type="text" id="antiHipertensivos">
+        <input type="text" id="observacoesAntiHipertensivos">
+        </div>
+
+       <div class="med-row">
+       <label>Anticoagulantes</label>
+       <input type="text" id="anticoagulantes">
+       <input type="text" id="observacoesAnticoagulantes">
+       </div>
+
+      <div class="med-row">
+      <label>Antiandrogênicos</label>
+      <input type="text" id="antiandrogênicos">
+      <input type="text" id="observacoesAntiandrogênicos">
+      </div>
+
+      <div class="med-row">
+      <label>Outros</label>
+      <input type="text" id="outros">
+      <input type="text" id="observacoesOutros">
+
+      </div>
+</div>
+
 
         <!-- SAÚDE MENTAL -->
         <div class="section">
 
-          <h2>7 - Saúde Mental</h2>
+          <h2>7 - Avaliação Mental e Emocional </h2>
 
           <div class="grid-2">
 
             <div>
 
               <label>Humor</label>
-              <input type="text">
+              <input type="text" id="humor">
 
               <label>Ansiedade</label>
-              <input type="text">
+              <input type="text" id="ansiedade">
+           
+              <label>Autoimagem corporal</label>
+              <input type="text" id="autoimagemCorporal">
+
+             <label>Sono</label>
+              <input type="text" id="sono">
+
+             <label>Apoio Familiar/Social</label>
+              <input type="text" id="apoiFamiliarSocial">
+ 
+              <label>Ideação suicida</label>
+              <div class="buttons" id="ideacaoSuicida">
+                <button type="button" class="btn-select">Sim</button>
+                <button type="button" class="btn-select">Não</button>
+              </div>
+
 
             </div>
 
@@ -240,6 +392,82 @@
         </div>
 
       </div>
+
+          <div class="section">
+
+          <h2>8 - Enfrentamentos Sociais e Contextos de Vunerabilidade</h2>
+
+          <div class="grid-2">
+
+            <div>
+
+              <label>Situação de Moradia</label>
+
+              <div class="buttons" id="situacaoMoradia">
+                <button type="button" class="btn-select">Estável</button>
+                <button type="button" class="btn-select">Instável</button>
+                <button type="button" class="btn-select">Rua</button>
+              </div>
+
+              <label>Vínculos Familiares</label>
+
+              <div class="buttons" id="vinculosFamiliares">
+                <button type="button" class="btn-select">Presentes</button>
+                <button type="button" class="btn-select">Parcialmente</button>
+                <button type="button" class="btn-select">Rompidos</button>
+              </div>
+
+
+              <label>Acessonao Trabalhos/Renda</label>
+
+              <div class="buttons" id="acessoTrabalhoRenda">
+                <button type="button" class="btn-select">Formal</button>
+                <button type="button" class="btn-select">Informal</button>
+                <button type="button" class="btn-select">Desempregado(a)</button>
+              </div>
+
+	     <label>Acesso á Saúde Pública</label>
+
+              <div class="buttons" id="acessoSaudePublica">
+                <button type="button" class="btn-select">Regular</button>
+                <button type="button" class="btn-select">Dificultado</button>
+              </div>
+              
+              <label>Discriminação vivida</label>
+
+              <div class="buttons vivida-group" id="discriminacaoVivida">
+                <button type="button" class="btn-select">Nenhuma</button>
+                <button type="button" class="btn-select">Relatada - Descrever</button>
+                <input type="text" class="input-vivida" id="observacoesDiscriminacaoVivida">
+              </div>
+
+
+              <label>Rede de Apoio Social</label>
+
+              <div class="buttons" id="redeApoioSocial">
+                <button type="button" class="btn-select">Sim</button>
+                <button type="button" class="btn-select">Não</button>
+              </div>
+
+              <label>Estratégias Enfrentamento</label>
+              <input type="text" id="estrategiasEnfrentamento">
+
+              <label>Encaminhamentos Necessários</label>
+
+              <div class="buttons encaminhamento-group" id="encaminhamentosNecessarios">
+                <button type="button" class="btn-select">Serviço Social</button>
+                <button type="button" class="btn-select">Psicologia</button>
+                <button type="button" class="btn-select">Juridicos</button>
+                <button type="button" class="btn-select">Outros</button>
+                <input type="text" class="input-encaminhamento" id="observacoesEncaminhamentos">
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
 
       <!-- EXAME FÍSICO -->
       <div class="section">
@@ -251,20 +479,20 @@
           <div>
 
             <label>Pressão Arterial</label>
-            <input type="text">
+            <input type="text" id="pressaoArterial">
 
             <label>Peso</label>
-            <input type="text">
+            <input type="text" id="peso">
 
           </div>
 
           <div>
 
             <label>Frequência Cardíaca</label>
-            <input type="text">
+            <input type="text" id="frequenciaCardiaca">
 
             <label>Altura</label>
-            <input type="text">
+            <input type="text" id="altura">
 
           </div>
 
@@ -282,14 +510,14 @@
           <div>
 
             <label>Hemograma</label>
-            <input type="text">
+            <input type="text" id="hemograma">
 
           </div>
 
           <div>
 
             <label>Glicemia</label>
-            <input type="text">
+            <input type="text" id="glicemia">
 
           </div>
 
@@ -302,19 +530,19 @@
 
         <h2>13 - Conduta de Enfermagem</h2>
 
-        <textarea></textarea>
+        <textarea id="condutaEnfermagem"></textarea>
 
       </div>
 
       <!-- BOTÃO -->
-      <button class="Salvar" type="submit">
+      <button class="Salvar" type="button" onclick="salvarDados()">
         Salvar Prontuário
       </button>
 
     </form>
 
   </div>
-
+  <script src="Node.js"></script>
 </body>
 
 </html>

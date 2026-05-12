@@ -1,0 +1,77 @@
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Segoe UI',sans-serif;
+      background:#eef2f7;
+      padding:40px;
+      color:#1f2937;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .titulo{
+      font-size:38px;
+      font-weight:800;
+      color:#163845;
+      margin-bottom:30px;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:22px;
+      margin-bottom:25px;
+
+      border:1px solid #e6ecf2;
+
+      box-shadow:
+      0 4px 10px rgba(15,23,42,.04),
+      0 12px 25px rgba(15,23,42,.06);
+    }
+
+    .card h2{
+      font-size:24px;
+      margin-bottom:25px;
+      color:#163845;
+
+      border-bottom:1px solid #edf2f7;
+      padding-bottom:12px;
+    }
+
+    .linha{
+      margin-bottom:16px;
+    }
+
+    .linha strong{
+      color:#163845;
+    }
+
+    .voltar{
+      margin-top:30px;
+
+      width:220px;
+      height:52px;
+
+      border:none;
+      border-radius:16px;
+
+      background:linear-gradient(
+        90deg,
+        #1f7a68,
+        #2c8c7c
+      );
+
+      color:white;
+
+      font-size:15px;
+      font-weight:700;
+
+      cursor:pointer;
+    }

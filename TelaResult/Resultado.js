@@ -122,6 +122,16 @@ window.onload = function () {
         dados.usoPreservativo
     );
 
+    mostrar("historicoISTs", dados.historicoISTs);
+
+    mostrar("desejoReprodutivo", dados.desejoReprodutivo);
+
+    mostrar("planejamentoReprodutivo", dados.planejamentoReprodutivo);
+
+    mostrar("acessoServicosSaude", dados.acessoServicosSaude);
+    
+    mostrar("orientacaoRecebidas", dados.orientacaoRecebidas);
+
     // =========================
     // SAÚDE MENTAL
     // =========================
@@ -219,4 +229,29 @@ window.onload = function () {
         dados.observacoesFinais
     );
 
+// =========================
+    // RENDERIZAR ALERTAS
+    // =========================
+    const cardAlertas = document.getElementById("cardAlertas");
+    const listaDeAlertas = document.getElementById("listaDeAlertas");
+
+    if (dados.alarmesGerados && dados.alarmesGerados.length > 0) {
+        
+        cardAlertas.style.display = "block";
+      
+        dados.alarmesGerados.forEach(alarme => {
+            const caixaDeAlerta = document.createElement("div");
+            caixaDeAlerta.classList.add("alert-box");
+
+            if (alarme.tipo === "vermelho") {
+                caixaDeAlerta.classList.add("alert-red");
+                caixaDeAlerta.innerHTML = `<strong>Alarme vermelho:</strong> ${alarme.mensagem}`;
+            } else if (alarme.tipo === "amarelo") {
+                caixaDeAlerta.classList.add("alert-yellow");
+                caixaDeAlerta.innerHTML = `<strong>Alarme amarelo:</strong> ${alarme.mensagem}`;
+            }
+
+            listaDeAlertas.appendChild(caixaDeAlerta);
+        });
+    }
 };

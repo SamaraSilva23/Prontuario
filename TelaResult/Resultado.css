@@ -75,27 +75,55 @@
 
       cursor:pointer;
 
-
-  .alert-box {
+/* =========================================
+   CARDS DE ALERTA (DASHBOARD)
+========================================= */
+.dashboard-alerts {
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 16px 18px;
-  border-radius: 14px; /* Combinando com o estilo dos seus cards */
-  border: 1px solid transparent;
-  font-size: 14px;
+  flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
-.alert-yellow {
-  background: #fef9c3;
-  border-color: #fde68a;
-  color: #92400e;
+.alert-card {
+  flex: 1; /* Faz os cards dividirem o espaço igualmente */
+  min-width: 200px; /* Evita que fiquem espremidos no celular */
+  padding: 18px 20px;
+  border-radius: 12px;
+  color: rgb(12, 10, 10);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.alert-red {
-  background: #fee2e2;
-  border-color: #fca5a5;
-  color: #991b1b;
+.alert-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.alert-card p {
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.95;
+  margin: 0;
+}
+
+/* Cores Baseadas na sua imagem */
+.bg-red {
+  background: linear-gradient(135deg, #b91c1c, #991b1b);
+}
+
+.bg-orange {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.bg-green {
+  background: linear-gradient(135deg, #10b981, #059669);
 }
 
     }

@@ -158,6 +158,16 @@ window.onload = function () {
     );
 
     // =========================
+    // USO DE MEDICAÇÕES
+    // =========================
+    mostrar("hormonio", dados.hormonioterapia);
+    mostrar("antidepre", dados.antidepressivos);
+    mostrar("antihipertensivos", dados.antiHipertensivos);
+    mostrar("anticoagulantes", dados.anticoagulantes);
+    mostrar("antiandrogênicos", dados.antiandrogenicos);
+    mostrar("outros", dados.outrosMedicamentos);
+
+    // =========================
     // CONTEXTO SOCIAL
     // =========================
 
@@ -230,28 +240,35 @@ window.onload = function () {
     );
 
 // =========================
-    // RENDERIZAR ALERTAS
+    // RENDERIZAR ALERTAS (NOVO VISUAL)
     // =========================
-    const cardAlertas = document.getElementById("cardAlertas");
-    const listaDeAlertas = document.getElementById("listaDeAlertas");
+    const dashboardAlerts = document.getElementById("dashboardAlerts");
 
     if (dados.alarmesGerados && dados.alarmesGerados.length > 0) {
         
-        cardAlertas.style.display = "block";
-      
         dados.alarmesGerados.forEach(alarme => {
-            const caixaDeAlerta = document.createElement("div");
-            caixaDeAlerta.classList.add("alert-box");
+            const card = document.createElement("div");
+            card.classList.add("alert-card");
 
+            // Define cor e ícone baseado no tipo do alarme
+            let icone = "⚠️";
             if (alarme.tipo === "vermelho") {
-                caixaDeAlerta.classList.add("alert-red");
-                caixaDeAlerta.innerHTML = `<strong>Alarme vermelho:</strong> ${alarme.mensagem}`;
+                card.classList.add("bg-red");
+                icone = "🚨";
             } else if (alarme.tipo === "amarelo") {
-                caixaDeAlerta.classList.add("alert-yellow");
-                caixaDeAlerta.innerHTML = `<strong>Alarme amarelo:</strong> ${alarme.mensagem}`;
+                card.classList.add("bg-orange");
+            } else if (alarme.tipo === "verde") {
+                card.classList.add("bg-green");
+                icone = "✅";
             }
 
-            listaDeAlertas.appendChild(caixaDeAlerta);
+            // Monta o HTML dentro do card
+            card.innerHTML = `
+                <h3>${icone} ${alarme.titulo}</h3>
+                <p>${alarme.mensagem}</p>
+            `;
+
+            dashboardAlerts.appendChild(card);
         });
     }
 };

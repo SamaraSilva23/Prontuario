@@ -78,6 +78,22 @@ function salvarDados() {
         orientacaoRecebidas: document.getElementById("orientacaoRecebidas")?.value || "",
         // ------------------------------------------
 
+        // ---- CAMPOS NOVOS ADICIONADOS AQUI 👇 ----
+        historicoISTs: document.getElementById("historicoISTs")?.value || "",
+        desejoReprodutivo: document.getElementById("desejoReprodutivo")?.value || "",
+        planejamentoReprodutivo: document.getElementById("planejamentoReprodutivo")?.value || "",
+        acessoServicosSaude: document.getElementById("acessoServicosSaude")?.value || "",
+        orientacaoRecebidas: document.getElementById("orientacaoRecebidas")?.value || "",
+        // ------------------------------------------
+
+        // USO DE MEDICAÇÕES
+        hormonioterapia: document.getElementById("hormonioterapia")?.value || "",
+        antidepressivos: document.getElementById("antidepressivos")?.value || "",
+        antiHipertensivos: document.getElementById("antiHipertensivos")?.value || "",
+        anticoagulantes: document.getElementById("anticoagulantes")?.value || "",
+        antiandrogenicos: document.getElementById("antiandrogenicos")?.value || "",
+        outrosMedicamentos: document.getElementById("outros")?.value || "",
+
         humor: document.getElementById("humor")?.value || "",
         ansiedade: document.getElementById("ansiedade")?.value || "",
         autoimagemCorporal: document.getElementById("autoimagemCorporal")?.value || "",
@@ -89,7 +105,7 @@ function salvarDados() {
         estrategiasEnfrentamento: document.getElementById("estrategiasEnfrentamento")?.value || "",
 
         // EXAME FÍSICO
-        pressaoArterial: document.getElementById("pressaoArterial")?.value || "",
+        pressaoArterial: document.getElementById("pa")?.value || "",
         peso: document.getElementById("peso")?.value || "",
         frequenciaCardiaca: document.getElementById("frequenciaCardiaca")?.value || "",
         altura: document.getElementById("altura")?.value || "",
@@ -122,7 +138,8 @@ function salvarDados() {
         if (parseInt(sis) > 140 || parseInt(dia) > 90) {
             alarmes.push({ 
                 tipo: "vermelho", 
-                mensagem: "PA > 140/90. Atenção para níveis pressóricos elevados." 
+                titulo: "Risco Cardiovascular", // <-- ADICIONADO AQUI
+                mensagem: "PA > 140/90. Atenção para níveis elevados." 
             });
         }
     }
@@ -132,7 +149,8 @@ function salvarDados() {
     if (examesPendentes.length > 0) {
         alarmes.push({ 
             tipo: "amarelo", 
-            mensagem: "Exame preventivo vencido ou pendente de realização." 
+            titulo: "Preventivos", // <-- ADICIONADO AQUI
+            mensagem: "Exame preventivo vencido ou pendente." 
         });
     }
 

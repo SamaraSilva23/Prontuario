@@ -22,30 +22,36 @@
 
     <nav class="menu">
 
-  <a href="#">
+  <a href="#identificacao">
     <i class="fi fi-rr-user"></i>
     Identificação
   </a>
 
-  <a href="#">
+  <a href="#Historico">
     <i class="fi fi-rr-file-medical"></i>
     Histórico
   </a>
 
-  <a href="#">
+  <a href="#Saúde">
     <i class="fi fi-rr-heart"></i>
     Saúde
   </a>
 
-  <a href="#">
+  <a href="#Exames">
     <i class="fi fi-rr-test-tube"></i>
     Exames
   </a>
 
-  <a href="#">
+  <a href="#Acompanhamento"">
     <i class="fi fi-rr-envelope"></i>
     Acompanhamento
   </a>
+
+
+  <a href="../TelaPront/Pront.html">
+  <i class="fi fi-rr-document"></i>
+  Prontuários
+</a>
 
 </nav>
 
@@ -57,7 +63,7 @@
     <form>
 
       <!-- IDENTIFICAÇÃO -->
-      <div class="section">
+      <div class="section" id="identificacao">
 
         <h2>1 - Identificação</h2>
 
@@ -110,7 +116,7 @@
       </div>
 
       <!-- HISTÓRICO -->
-      <div class="section">
+      <div class="section" id="Historico">
 
         <h2>Histórico</h2>
 
@@ -235,7 +241,7 @@
       </div>
 
         <!-- SAÚDE SEXUAL -->
-       <div class="section">
+       <div class="section" id="Saúde">
 
   <h2>SAÚDE</h2>
 
@@ -496,7 +502,9 @@
   </div>
 
 </div>
+      <div class="section" id="Exames">
 
+        <h2>Exames</h2>
       <!-- EXAME FÍSICO -->
        <section class="section">
 
@@ -761,7 +769,7 @@
       </section>
 
       <!-- EXAMES -->
-      <section class="section">
+      <section class="section" >
 
         <h2>11 - Exames Laboratoriais Recentes</h2>
 
@@ -912,27 +920,37 @@
 
       </section>
 
+      </div>
+
+      <div class="section" id="Acompanhamento">
+
+        <h2>Acompanhamento</h2>
       <!-- CONDUTA -->
-      <section class="section">
+     <div class="section">
 
-        <h2>13 - Conduta de Enfermagem</h2>
+    <h2>13 - Conduta de Enfermagem</h2>
 
-        <div class="conduct-item">
-          <label>• Educação em saúde:</label>
-          <input type="text" id="educacaoSaude" placeholder="__________________________">
+    <div class="grid-2">
+
+      <div>
+
+        <label>Educação em saúde:</label>
+        <input type="text" id="educacaoSaude">
+
+        <label>Orientações dadas:</label>
+        <input type="text" id="orientacoesDadas">
+
+        <label>Encaminhamentos:</label>
+        <input type="text" id="Encaminhamentos:">
+
+        
         </div>
 
-        <div class="conduct-item">
-          <label>• Orientações dadas:</label>
-          <input type="text" id="orientacoesDadas" placeholder="__________________________">
-        </div>
+      </div>
 
-        <div class="conduct-item">
-          <label>• Encaminhamentos:</label>
-          <input type="text" id="encaminhamentos" placeholder="__________________________">
-        </div>
+    </div>
 
-      </section>
+  
 
       <!-- PLANEJAMENTO -->
       <section class="section">
@@ -972,6 +990,7 @@
         <textarea id="observacoesFinais"></textarea>
 
       </section>
+      </div>
 
       <!-- BOTÃO -->
       <button class="Salvar" type="button" onclick="salvarDados()">

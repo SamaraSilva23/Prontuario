@@ -30,27 +30,76 @@ body{
   border-right:1px solid rgba(255,255,255,.08);
 }
 
-.logo{ margin-bottom:45px; }
+/* =========================
+   LOGO
+========================= */
 
-.logo h2{
-  font-size:32px;
-  font-weight:800;
-  margin-bottom:10px;
-  letter-spacing:1px;
+
+.logo{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  text-align:center;
+
+  gap:10px;
+
+  margin-bottom:25px;
 }
 
+/* IMAGEM */
+.logo-img{
+  width: 120px;
+  height:auto;
+
+  object-fit:contain;
+
+  margin-bottom:12px;
+
+  filter:
+  drop-shadow(0 4px 12px rgba(255,255,255,0.15));
+}
+
+/* TÍTULO */
+.logo h2{
+  font-size:29px;
+  font-weight:800;
+
+  margin-bottom:2px;
+
+  letter-spacing:1px;
+
+  color:white;
+}
+
+/* SUBTÍTULO */
 .subtitle{
   font-size:13px;
+
   text-transform:uppercase;
+
   letter-spacing:2px;
-  opacity:.8;
-  margin-bottom:10px;
+
+  font-weight:600;
+
+  color:#cbd5e1;
+
+  opacity:.9;
+
+  margin-bottom:6px;
 }
 
+/* TEXTO */
 .logo p:last-child{
   font-size:14px;
+
   line-height:1.6;
-  opacity:.85;
+
+  color:#94a3b8;
+
+  opacity:.9;
+
+  max-width:240px;
 }
 
 .menu{

@@ -241,34 +241,96 @@ window.onload = function () {
 
 // =========================
     // RENDERIZAR ALERTAS (NOVO VISUAL)
-    // =========================
-    const dashboardAlerts = document.getElementById("dashboardAlerts");
+    
 
-    if (dados.alarmesGerados && dados.alarmesGerados.length > 0) {
-        
-        dados.alarmesGerados.forEach(alarme => {
-            const card = document.createElement("div");
-            card.classList.add("alert-card");
+const dashboardAlerts =
+document.getElementById("dashboardAlerts");
+    if (
+    dados.doencasAssociadas?.includes("Hepatopatia") &&
+    dados.tipoHormonioterapia
+) {
 
-            // Define cor e ícone baseado no tipo do alarme
-            let icone = "⚠️";
-            if (alarme.tipo === "vermelho") {
-                card.classList.add("bg-red");
-                icone = "🚨";
-            } else if (alarme.tipo === "amarelo") {
-                card.classList.add("bg-orange");
-            } else if (alarme.tipo === "verde") {
-                card.classList.add("bg-green");
-                icone = "✅";
-            }
+    dashboardAlerts.innerHTML += `
+        <div class="RiscoHepatico">
+            🚨 Risco hepático:
+            uso de hormônio + hepatopatia
+        </div>
+    `;
+}
 
-            // Monta o HTML dentro do card
-            card.innerHTML = `
-                <h3>${icone} ${alarme.titulo}</h3>
-                <p>${alarme.mensagem}</p>
-            `;
+// ALERTA CARDIOVASCULAR
 
-            dashboardAlerts.appendChild(card);
-        });
-    }
-};
+if (
+    dados.doencasAssociadas?.includes("Hipertensão") &&
+    dados.tipoHormonioterapia?.includes("Androg")
+) {
+
+    dashboardAlerts.innerHTML += `
+        <div class="RiscoCardiovascular">
+            🚨 Risco cardiovascular:
+            uso androgênico + hipertensão
+        </div>
+    `;
+}
+
+
+
+if (
+    dados.antiandrogenicos &&
+    dados.antidepressivos
+) {
+
+    dashboardAlerts.innerHTML += `
+        <div class="InteracaoMedicamentos">
+            ⚠️ Interação medicamentosa:
+            antiandrogênico + antidepressivo
+        </div>
+    `;
+}
+
+
+if (
+    dados.atividadeSexual === "Sim" &&
+    (
+        dados.usoPreservativo === "Nunca" ||
+        dados.usoPreservativo === "Às vezes"
+    )
+) {
+
+    dashboardAlerts.innerHTML += `
+        <div class="RiscoIST">
+            ⚠️ Risco aumentado de IST:
+            paciente sem uso regular de preservativo
+        </div>
+    `;
+}
+
+
+if (dados.ideacaoSuicida === "Sim") {
+
+    dashboardAlerts.innerHTML += `
+        <div class="RiscoSuicida">
+            ⚠️ Risco de ideação suicida
+        </div>
+    `;
+}
+
+
+
+if (
+    dados.moradia === "Instável" ||
+    dados.discriminacao === "Sim"
+) {
+
+    dashboardAlerts.innerHTML += `
+        <div class="RiscoPsicossocial">
+            ⚠️ Risco psicossocial:
+            moradia instável ou relato de discriminação
+        </div>
+    `;
+}
+
+}
+
+
+

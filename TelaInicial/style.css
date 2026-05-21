@@ -1021,3 +1021,119 @@ button:hover{
     justify-content:center;
   }
 }
+
+/* =====================================================
+   INTEGRAÇÃO SUPABASE - ESTILOS DOS MODAIS
+===================================================== */
+
+.modal-overlay{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  z-index:9999;
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-overlay.active{
+  display:flex;
+}
+
+.modal-sucesso,
+.modal-erro{
+  background:white;
+  padding:40px;
+  border-radius:24px;
+  text-align:center;
+  max-width:400px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.3);
+  animation:modalIn 0.3s ease;
+}
+
+@keyframes modalIn{
+  from{
+    opacity:0;
+    transform:scale(0.9);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+.icone-sucesso{
+  width:80px;
+  height:80px;
+  background:linear-gradient(135deg,#1f7a68,#2c8c7c);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 20px;
+}
+
+.icone-sucesso svg{
+  width:40px;
+  height:40px;
+  fill:white;
+}
+
+.icone-erro{
+  width:80px;
+  height:80px;
+  background:linear-gradient(135deg,#dc2626,#ef4444);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 20px;
+}
+
+.icone-erro svg{
+  width:40px;
+  height:40px;
+  fill:white;
+}
+
+.modal-sucesso h2,
+.modal-erro h2{
+  color:#163845;
+  font-size:24px;
+  margin-bottom:10px;
+}
+
+.modal-sucesso p,
+.modal-erro p{
+  color:#667085;
+  font-size:15px;
+  margin-bottom:25px;
+}
+
+.btn-modal{
+  padding:14px 40px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(90deg,#1f7a68,#2c8c7c);
+  color:white;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.btn-modal:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(44,140,124,0.3);
+}
+
+.btn-modal.btn-erro{
+  background:linear-gradient(90deg,#dc2626,#ef4444);
+}
+
+.btn-modal.btn-erro:hover{
+  box-shadow:0 8px 20px rgba(220,38,38,0.3);
+}

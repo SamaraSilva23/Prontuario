@@ -1,129 +1,369 @@
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    body{
-      font-family:'Segoe UI',sans-serif;
-      background:#eef2f7;
-      padding:40px;
-      color:#1f2937;
-    }
-
-    .container{
-      max-width:1200px;
-      margin:auto;
-    }
-
-    .titulo{
-      font-size:38px;
-      font-weight:800;
-      color:#163845;
-      margin-bottom:30px;
-    }
-
-    .card{
-      background:white;
-      padding:30px;
-      border-radius:22px;
-      margin-bottom:25px;
-
-      border:1px solid #e6ecf2;
-
-      box-shadow:
-      0 4px 10px rgba(15,23,42,.04),
-      0 12px 25px rgba(15,23,42,.06);
-    }
-
-    .card h2{
-      font-size:24px;
-      margin-bottom:25px;
-      color:#163845;
-
-      border-bottom:1px solid #edf2f7;
-      padding-bottom:12px;
-    }
-
-    .linha{
-      margin-bottom:16px;
-    }
-
-    .linha strong{
-      color:#163845;
-    }
-
-    .voltar{
-      margin-top:30px;
-
-      width:220px;
-      height:52px;
-
-      border:none;
-      border-radius:16px;
-
-      background:linear-gradient(
-        90deg,
-        #1f7a68,
-        #2c8c7c
-      );
-
-      color:white;
-
-      font-size:15px;
-      font-weight:700;
-
-      cursor:pointer;
-
-/* =========================================
-   CARDS DE ALERTA (DASHBOARD)
-========================================= */
-.dashboard-alerts {
-  display: flex;
-  flex-wrap: wrap; /* Permite quebrar linha em telas menores */
-  gap: 15px;
-  margin-bottom: 25px;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-.alert-card {
-  flex: 1; /* Faz os cards dividirem o espaço igualmente */
-  min-width: 200px; /* Evita que fiquem espremidos no celular */
-  padding: 18px 20px;
-  border-radius: 12px;
-  color: rgb(12, 10, 10);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+body{
+  font-family:'Segoe UI',sans-serif;
+
+  background:#f4f7fb;
+
+  color:#1e293b;
+
+  padding:40px 24px;
+
+  min-height:100vh;
+}
+
+/* CONTAINER */
+
+.container{
+  width:100%;
+  max-width:1250px;
+
+  margin:auto;
+}
+
+/* TOPO */
+
+.topo{
+  margin-bottom:32px;
+}
+
+.subtitulo{
+  font-size:12px;
+
+  font-weight:700;
+
+  text-transform:uppercase;
+
+  letter-spacing:2px;
+
+  color:#64748b;
+
+  margin-bottom:10px;
+}
+
+.titulo{
+  font-size:42px;
+
+  font-weight:800;
+
+  color:#163845;
+
+  letter-spacing:-1px;
+}
+
+/* ALERTAS */
+
+.dashboard-alerts{
+  margin-bottom:28px;
+}
+
+/* CARDS */
+
+.card{
+  background:rgba(255,255,255,.97);
+
+  border:1px solid #e7edf3;
+
+  border-radius:28px;
+
+  padding:38px;
+
+  margin-bottom:28px;
+
+  box-shadow:
+  0 4px 10px rgba(15,23,42,.03),
+  0 14px 30px rgba(15,23,42,.05);
+
+  transition:.25s ease;
+}
+
+.card:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+  0 10px 22px rgba(15,23,42,.04),
+  0 22px 40px rgba(15,23,42,.07);
+}
+
+/* HEADER CARD */
+
+.card-header{
+  margin-bottom:30px;
+}
+
+.card h2{
+  font-size:24px;
+
+  font-weight:700;
+
+  color:#163845;
+
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+
+  padding-bottom:18px;
+
+  border-bottom:1px solid #edf2f7;
+}
+
+.card h2::before{
+  content:"";
+
+  width:5px;
+  height:26px;
+
+  border-radius:999px;
+
+  background:
+  linear-gradient(
+    180deg,
+    #2c8c7c,
+    #1f7a68
+  );
+}
+
+/* GRID */
+
+.info-grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(320px,1fr));
+
+  gap:18px;
+}
+
+/* LINHAS */
+
+.linha{
+  background:#fbfcfe;
+
+  border:1px solid #edf2f7;
+
+  border-radius:20px;
+
+  padding:20px 22px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:10px;
+
+  transition:.2s ease;
+}
+
+.linha:hover{
+  border-color:#d7e3ea;
+
+  box-shadow:
+  0 6px 18px rgba(15,23,42,.04);
+}
+
+/* LABEL */
+
+.linha strong{
+  font-size:12px;
+
+  font-weight:700;
+
+  text-transform:uppercase;
+
+  letter-spacing:1px;
+
+  color:#64748b;
+}
+
+/* VALORES */
+
+.linha span{
+  font-size:15px;
+
+  line-height:1.8;
+
+  color:#1e293b;
+
+  font-weight:500;
+
+  word-break:break-word;
+}
+
+/* OBSERVAÇÃO */
+
+.observacao{
+  background:#f8fafc;
+
+  border:1px solid #e2e8f0;
+
+  padding:28px;
+
+  border-radius:22px;
+}
+
+#observacoesFinais{
+  line-height:1.9;
+}
+
+/* BOTÃO */
+
+.voltar{
+  width:100%;
+  max-width:320px;
+
+  height:58px;
+
+  margin:10px auto 0;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:none;
+
+  border-radius:20px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #1f7a68 0%,
+    #2c8c7c 100%
+  );
+
+  color:white;
+
+  font-size:15px;
+
+  font-weight:700;
+
+  letter-spacing:.3px;
+
+  cursor:pointer;
+
+  transition:.25s ease;
+
+  box-shadow:
+  0 12px 30px rgba(44,140,124,.22);
+}
+
+.voltar:hover{
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 18px 38px rgba(44,140,124,.30);
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-track{
+  background:#edf2f7;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#b8c4cf;
+
+  border-radius:999px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:#94a3b8;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+  body{
+    padding:24px 16px;
+  }
+
+  .titulo{
+    font-size:32px;
+  }
+
+  .card{
+    padding:28px;
+    border-radius:24px;
+  }
+
+  .card h2{
+    font-size:20px;
+  }
+
+  .info-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:500px){
+
+  .titulo{
+    font-size:28px;
+  }
+
+  .card{
+    padding:22px;
+  }
+
+  .linha{
+    padding:18px;
+  }
+
+  .voltar{
+    max-width:100%;
+  }
+
+}
+
+/* ==========================================================================
+   Bloco de Alertas Dinâmicos (Dashboard)
+   ========================================================================== */
+
+/* Estilo geral que limpa e formata o container de alertas */
+#dashboardAlerts {
+  margin-top: 10px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px; /* Espaço entre os alertas caso apareça mais de um */
 }
 
-.alert-card h3 {
-  font-size: 16px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 0;
+/* Base comum para todos os cartões de alerta */
+#dashboardAlerts > div {
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.alert-card p {
-  font-size: 13px;
-  line-height: 1.4;
-  opacity: 0.95;
-  margin: 0;
+/* 🔴 ALERTAS CRÍTICOS / ALTO RISCO (Vermelho)
+   Para situações clínicas graves que exigem conduta imediata */
+.RiscoHepatico, 
+.RiscoCardiovascular, 
+.RiscoSuicida {
+  background-color: #ffebeb; /* Fundo vermelho bem suave */
+  border-left: 5px solid #d32f2f; /* Barra vermelha médica */
+  color: #c62828; /* Texto vermelho escuro legível */
 }
 
-/* Cores Baseadas na sua imagem */
-.bg-red {
-  background: linear-gradient(135deg, #b91c1c, #991b1b);
+/* 🟡 ALERTAS DE ATENÇÃO / PREVENÇÃO (Amarelo/Laranja)
+   Para interações, acompanhamento psicossocial e riscos de IST */
+.InteracaoMedicamentos, 
+.RiscoPsicossocial,
+.RiscoIST {
+  background-color: #fff9e6; /* Fundo amarelo suave */
+  border-left: 5px solid #f59e0b; /* Barra âmbar/laranja */
+  color: #92400e; /* Texto marrom escuro legível */
 }
-
-.bg-orange {
-  background: linear-gradient(135deg, #f59e0b, #d97706);
-}
-
-.bg-green {
-  background: linear-gradient(135deg, #10b981, #059669);
-}
-
-    }

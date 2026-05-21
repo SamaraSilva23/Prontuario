@@ -47,50 +47,96 @@
 
         <i class="fi fi-rr-search"></i>
 
-        <input 
+        <input
           type="text"
+          id="campoPesquisa"
           placeholder="Pesquisar paciente..."
+          oninput="filtrarProntuarios()"
         >
 
       </div>
 
-      <!-- GRID DE CARDS -->
-      <div class="prontuarios-grid">
-
-        <!-- CARD -->
-        <div class="prontuario-card">
-
-          <h2>Ana Costa</h2>
-
-          <div class="card-info">
-
-            <div class="info-item">
-              <i class="fi fi-rr-id-badge"></i>
-              <span>ID: #003</span>
-            </div>
-
-            <div class="info-item">
-              <i class="fi fi-rr-calendar"></i>
-              <span>16/05/2026</span>
-            </div>
-
-          </div>
-
-          <div class="card-actions">
-
-            <button class="card-btn btn-view">
-              Visualizar
-            </button>
-
-          </div>
-
-        </div>
-
+      <!-- GRID DE CARDS - CARREGADO DO BANCO -->
+      <div class="prontuarios-grid" id="gridProntuarios">
+        <p style="color:#667085;">Carregando prontuários...</p>
       </div>
 
     </div>
 
   </main>
+
+  <!-- SCRIPTS - INTEGRAÇÃO SUPABASE -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../TelaInicial/supabase-config.js"></script>
+  <script src="../TelaInicial/database.js"></script>
+
+  <script>
+    let todosProntuarios = [];
+
+    document.addEventListener('DOMContentLoaded', carregarProntuarios);
+
+    async function carregarProntuarios() {
+      const grid = document.getElementById('gridProntuarios');
+      try {
+        const prontuarios = await buscarProntuarios();
+        todosProntuarios = prontuarios;
+        if (!prontuarios || prontuarios.length === 0) {
+          grid.innerHTML = '<p style="color:#667085;">Nenhum prontuário encontrado.</p>';
+          return;
+        }
+        renderizarCards(prontuarios);
+      } catch (error) {
+        console.error('Erro:', error);
+        grid.innerHTML = '<p style="color:#dc2626;">Erro ao carregar prontuários.</p>';
+      }
+    }
+
+    function renderizarCards(prontuarios) {
+      const grid = document.getElementById('gridProntuarios');
+      grid.innerHTML = '';
+      prontuarios.forEach(pront => {
+        const paciente = pront.pacientes;
+        const dataConsulta = pront.data_consulta ? new Date(pront.data_consulta).toLocaleDateString('pt-BR') : 'Sem data';
+        const card = document.createElement('div');
+        card.className = 'prontuario-card';
+        card.innerHTML = `
+          <h2>${paciente?.nome_social || 'Paciente'}</h2>
+          <div class="card-info">
+            <div class="info-item">
+              <i class="fi fi-rr-id-badge"></i>
+              <span>ID: #${String(pront.id).padStart(3, '0')}</span>
+            </div>
+            <div class="info-item">
+              <i class="fi fi-rr-calendar"></i>
+              <span>${dataConsulta}</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="card-btn btn-view" onclick="visualizarProntuario(${pront.id})">Visualizar</button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function filtrarProntuarios() {
+      const termo = document.getElementById('campoPesquisa').value.toLowerCase();
+      if (!termo) { renderizarCards(todosProntuarios); return; }
+      const filtrados = todosProntuarios.filter(p => {
+        const nome = p.pacientes?.nome_social?.toLowerCase() || '';
+        return nome.includes(termo) || String(p.id).includes(termo);
+      });
+      renderizarCards(filtrados);
+    }
+
+    async function visualizarProntuario(id) {
+      const prontuario = await buscarProntuarioCompleto(id);
+      if (prontuario) {
+        localStorage.setItem('prontuarioAtual', JSON.stringify(prontuario));
+        window.location.href = '../TelaResult/Resultado.html';
+      }
+    }
+  </script>
 
 </body>
 </html>

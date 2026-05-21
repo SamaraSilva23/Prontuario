@@ -13,288 +13,336 @@
 
   <div class="container">
 
-    <h1 class="titulo">
-      Resultado do Prontuário
-    </h1>
+    <!-- TOPO -->
+    <div class="topo">
 
-    <div class="dashboard-alerts" id="dashboardAlerts"></div>
+      <div>
+        <p class="subtitulo">
+          Sistema de Prontuário Clínico
+        </p>
 
-    <div class="card">
+        <h1 class="titulo">
+          Resultado do Prontuário
+        </h1>
+      </div>
+
+    </div>
+
+    <!-- ALERTAS -->
+    <div
+      class="dashboard-alerts"
+      id="dashboardAlerts">
+    </div>
 
     <!-- IDENTIFICAÇÃO -->
-
     <div class="card">
 
-      <h2>Identificação</h2>
-
-      <div class="linha">
-        <strong>Nome:</strong>
-        <span id="nome"></span>
+      <div class="card-header">
+        <h2>Identificação</h2>
       </div>
 
-      <div class="linha">
-        <strong>Nome Civil:</strong>
-        <span id="nomeCivil"></span>
-      </div>
+      <div class="info-grid">
 
-      <div class="linha">
-        <strong>Pronome:</strong>
-        <span id="pronome"></span>
-      </div>
+        <div class="linha">
+          <strong>Nome</strong>
+          <span id="nome"></span>
+        </div>
 
-      <div class="linha">
-        <strong>Idade:</strong>
-        <span id="idade"></span>
-      </div>
+        <div class="linha">
+          <strong>Nome Civil</strong>
+          <span id="nomeCivil"></span>
+        </div>
 
-      <div class="linha">
-        <strong>Identidade de Gênero:</strong>
-        <span id="identidadeGenero"></span>
-      </div>
+        <div class="linha">
+          <strong>Pronome</strong>
+          <span id="pronome"></span>
+        </div>
 
-      <div class="linha">
-        <strong>Contato:</strong>
-        <span id="contato"></span>
-      </div>
+        <div class="linha">
+          <strong>Idade</strong>
+          <span id="idade"></span>
+        </div>
 
-      <div class="linha">
-        <strong>Profissional:</strong>
-        <span id="profissional"></span>
-      </div>
+        <div class="linha">
+          <strong>Identidade de Gênero</strong>
+          <span id="identidadeGenero"></span>
+        </div>
 
-      <div class="linha">
-        <strong>Data da Consulta:</strong>
-        <span id="dataConsulta"></span>
-      </div>
+        <div class="linha">
+          <strong>Contato</strong>
+          <span id="contato"></span>
+        </div>
 
-      <div class="linha">
-        <strong>Próxima Consulta:</strong>
-        <span id="proximaConsulta"></span>
+        <div class="linha">
+          <strong>Profissional</strong>
+          <span id="profissional"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Data da Consulta</strong>
+          <span id="dataConsulta"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Próxima Consulta</strong>
+          <span id="proximaConsulta"></span>
+        </div>
+
       </div>
 
     </div>
 
+    <!-- HISTÓRICO -->
     <div class="card">
 
-    <!-- HISTÓRICO E HISTÓRIA CLÍNICA -->
-
-<div class="card">
-
-  <h2>Histórico</h2>
-
-  <div class="linha">
-    <strong>Queixa Principal:</strong>
-    <span id="queixaPrincipal"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Histórico de Doença Atual:</strong>
-    <span id="hda"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Tempo Hormonioterapia:</strong>
-    <span id="tempoHormonioterapia"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Tipo:</strong>
-    <span id="tipoHormonioterapia"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Via Administração:</strong>
-    <span id="viaAdministracao"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Dose Atual:</strong>
-    <span id="doseAtual"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Queixas Relacionadas:</strong>
-    <span id="queixasRelacionadas"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Cirurgia de redesignação sexual:</strong>
-    <span id="cirurgiaRedesignacaoSexual"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Procedimentos Prévios:</strong>
-    <span id="procedimentosPrevios"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Doenças Associadas:</strong>
-    <span id="doencasAssociadas"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Histórico Familiar:</strong>
-    <span id="historicoFamiliar"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Alergias:</strong>
-    <span id="alergias"></span>
-  </div>
-
-</div>
-
-   
-<div class="card">
-
-  <h2>Saúde Sexual e Mental</h2>
-
-  <div class="linha">
-    <strong>Atividade Sexual:</strong>
-    <span id="atividadeSexual"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Número de Parceiros:</strong>
-    <span id="numeroParceiros"></span>
-  </div>
-
-   <div class="linha">
-    <strong>Tipos de Parceiros:</strong>
-    <span id="tipoParceiro"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Uso de Preservativo:</strong>
-    <span id="usoPreservativo"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Histórico ISTs:</strong>
-    <span id="historicoISTs"></span>
-  </div>
-
-   <div class="linha">
-    <strong>Desejo reprodutivo atual:</strong>
-    <span id="desejoReprodutivo"></span>
-  </div>
-
-   <div class="linha">
-    <strong>Planejamento reprodutivo realizado:</strong>
-    <span id="planejamentoReprodutivo"></span>
-  </div>
-
-   <div class="linha">
-    <strong>Acesso a serviços de saúde sexual e reprodutiva:</strong>
-    <span id="acessoServicosSaude"></span>
-  </div>
-
-   <div class="linha">
-    <strong>Orientações recebidas:</strong>
-    <span id="orientacaoRecebidas"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Humor:</strong>
-    <span id="humor"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Ansiedade:</strong>
-    <span id="ansiedade"></span>
-  </div>
-
-   <div class="linha">
-    <strong>Autoimagem corporal:</strong>
-    <span id="autoimagemCorporal"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Sono:</strong>
-    <span id="sono"></span>
-  </div>
-
-   <div class="linha">
-    <strong>Apoio familiar/social:</strong>
-    <span id="apoioFamiliarSocial"></span>
-  </div>
-
-  <div class="linha">
-    <strong>Ideação Suicida:</strong>
-    <span id="ideacaoSuicida"></span>
-  </div>
-
-</div>
-
- <div class="card">
-
-      <h2>Uso de Medicações</h2>
-
-      <div class="linha">
-        <strong>Hormônio:</strong>
-        <span id="hormonio"></span>
+      <div class="card-header">
+        <h2>Histórico</h2>
       </div>
 
-      <div class="linha">
-        <strong>Antidepressivos:</strong>
-        <span id="antidepre"></span>
-      </div>
+      <div class="info-grid">
 
-      <div class="linha">
-        <strong>Anti-hipertensivos:</strong>
-        <span id="antihipertensivos"></span>
-      </div>
+        <div class="linha">
+          <strong>Queixa Principal</strong>
+          <span id="queixaPrincipal"></span>
+        </div>
 
-      <div class="linha">
-        <strong>Anticoagulantes:</strong>
-        <span id="anticoagulantes"></span>
-      </div>
+        <div class="linha">
+          <strong>Histórico de Doença Atual</strong>
+          <span id="hda"></span>
+        </div>
 
-      <div class="linha">
-        <strong>Antiandrogênicos:</strong>
-        <span id="antiandrogênicos"></span>
-      </div>
+        <div class="linha">
+          <strong>Tempo Hormonioterapia</strong>
+          <span id="tempoHormonioterapia"></span>
+        </div>
 
-      <div class="linha">
-        <strong>Outros:</strong>
-        <span id="outros"></span>
-      </div>
-    </div>
+        <div class="linha">
+          <strong>Tipo</strong>
+          <span id="tipoHormonioterapia"></span>
+        </div>
 
-     <div class="card">
+        <div class="linha">
+          <strong>Via Administração</strong>
+          <span id="viaAdministracao"></span>
+        </div>
 
-      <h2>Contexto Social</h2>
+        <div class="linha">
+          <strong>Dose Atual</strong>
+          <span id="doseAtual"></span>
+        </div>
 
-      <div class="linha">
-        <strong>Estratégias de Enfrentamento:</strong>
-        <span id="estrategiasEnfrentamento"></span>
+        <div class="linha">
+          <strong>Queixas Relacionadas</strong>
+          <span id="queixasRelacionadas"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Cirurgia de redesignação sexual</strong>
+          <span id="cirurgiaRedesignacaoSexual"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Procedimentos Prévios</strong>
+          <span id="procedimentosPrevios"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Doenças Associadas</strong>
+          <span id="doencasAssociadas"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Histórico Familiar</strong>
+          <span id="historicoFamiliar"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Alergias</strong>
+          <span id="alergias"></span>
+        </div>
+
       </div>
 
     </div>
 
-    <!-- EXAME FÍSICO -->
+    <!-- SAÚDE -->
     <div class="card">
 
-      <h2>Exame Físico</h2>
-
-      <div class="linha">
-        <strong>Pressão Arterial:</strong>
-        <span id="pressaoArterial"></span>
+      <div class="card-header">
+        <h2>Saúde Sexual e Mental</h2>
       </div>
 
-      <div class="linha">
-        <strong>Peso:</strong>
-        <span id="peso"></span>
+      <div class="info-grid">
+
+        <div class="linha">
+          <strong>Atividade Sexual</strong>
+          <span id="atividadeSexual"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Número de Parceiros</strong>
+          <span id="numeroParceiros"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Tipos de Parceiros</strong>
+          <span id="tipoParceiro"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Uso de Preservativo</strong>
+          <span id="usoPreservativo"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Histórico ISTs</strong>
+          <span id="historicoISTs"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Desejo reprodutivo atual</strong>
+          <span id="desejoReprodutivo"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Planejamento reprodutivo realizado</strong>
+          <span id="planejamentoReprodutivo"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Acesso a serviços de saúde</strong>
+          <span id="acessoServicosSaude"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Orientações recebidas</strong>
+          <span id="orientacaoRecebidas"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Humor</strong>
+          <span id="humor"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Ansiedade</strong>
+          <span id="ansiedade"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Autoimagem corporal</strong>
+          <span id="autoimagemCorporal"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Sono</strong>
+          <span id="sono"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Apoio familiar/social</strong>
+          <span id="apoioFamiliarSocial"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Ideação Suicida</strong>
+          <span id="ideacaoSuicida"></span>
+        </div>
+
       </div>
 
-      <div class="linha">
-        <strong>Frequência Cardíaca:</strong>
-        <span id="frequenciaCardiaca"></span>
+    </div>
+
+    <!-- MEDICAÇÕES -->
+    <div class="card">
+
+      <div class="card-header">
+        <h2>Uso de Medicações</h2>
       </div>
 
-      <div class="linha">
-        <strong>Altura:</strong>
-        <span id="altura"></span>
+      <div class="info-grid">
+
+        <div class="linha">
+          <strong>Hormônio</strong>
+          <span id="hormonio"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Antidepressivos</strong>
+          <span id="antidepre"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Anti-hipertensivos</strong>
+          <span id="antihipertensivos"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Anticoagulantes</strong>
+          <span id="anticoagulantes"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Antiandrogênicos</strong>
+          <span id="antiandrogênicos"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Outros</strong>
+          <span id="outros"></span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CONTEXTO -->
+    <div class="card">
+
+      <div class="card-header">
+        <h2>Contexto Social</h2>
+      </div>
+
+      <div class="info-grid">
+
+        <div class="linha">
+          <strong>Estratégias de Enfrentamento</strong>
+          <span id="estrategiasEnfrentamento"></span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- EXAME -->
+    <div class="card">
+
+      <div class="card-header">
+        <h2>Exame Físico</h2>
+      </div>
+
+      <div class="info-grid">
+
+        <div class="linha">
+          <strong>Pressão Arterial</strong>
+          <span id="pressaoArterial"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Peso</strong>
+          <span id="peso"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Frequência Cardíaca</strong>
+          <span id="frequenciaCardiaca"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Altura</strong>
+          <span id="altura"></span>
+        </div>
+
       </div>
 
     </div>
@@ -302,16 +350,22 @@
     <!-- EXAMES -->
     <div class="card">
 
-      <h2>Exames Laboratoriais</h2>
-
-      <div class="linha">
-        <strong>Hemograma:</strong>
-        <span id="hemograma"></span>
+      <div class="card-header">
+        <h2>Exames Laboratoriais</h2>
       </div>
 
-      <div class="linha">
-        <strong>Glicemia:</strong>
-        <span id="glicemia"></span>
+      <div class="info-grid">
+
+        <div class="linha">
+          <strong>Hemograma</strong>
+          <span id="hemograma"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Glicemia</strong>
+          <span id="glicemia"></span>
+        </div>
+
       </div>
 
     </div>
@@ -319,21 +373,27 @@
     <!-- CONDUTA -->
     <div class="card">
 
-      <h2>Conduta de Enfermagem</h2>
-
-      <div class="linha">
-        <strong>Educação em Saúde:</strong>
-        <span id="educacaoSaude"></span>
+      <div class="card-header">
+        <h2>Conduta de Enfermagem</h2>
       </div>
 
-      <div class="linha">
-        <strong>Orientações Dadas:</strong>
-        <span id="orientacoesDadas"></span>
-      </div>
+      <div class="info-grid">
 
-      <div class="linha">
-        <strong>Encaminhamentos:</strong>
-        <span id="encaminhamentos"></span>
+        <div class="linha">
+          <strong>Educação em Saúde</strong>
+          <span id="educacaoSaude"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Orientações Dadas</strong>
+          <span id="orientacoesDadas"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Encaminhamentos</strong>
+          <span id="encaminhamentos"></span>
+        </div>
+
       </div>
 
     </div>
@@ -341,11 +401,17 @@
     <!-- PLANEJAMENTO -->
     <div class="card">
 
-      <h2>Planejamento</h2>
+      <div class="card-header">
+        <h2>Planejamento</h2>
+      </div>
 
-      <div class="linha">
-        <strong>Próxima Consulta:</strong>
-        <span id="dataPlanejamento"></span>
+      <div class="info-grid">
+
+        <div class="linha">
+          <strong>Próxima Consulta</strong>
+          <span id="dataPlanejamento"></span>
+        </div>
+
       </div>
 
     </div>
@@ -353,20 +419,24 @@
     <!-- OBSERVAÇÕES -->
     <div class="card">
 
-      <h2>Observações Finais</h2>
+      <div class="card-header">
+        <h2>Observações Finais</h2>
+      </div>
 
-      <div class="linha">
+      <div class="linha observacao">
         <span id="observacoesFinais"></span>
       </div>
 
     </div>
 
-
+    <!-- BOTÃO -->
     <button
-  class="voltar"
-  onclick="window.location.href='../TelaInicial/index.html'">
-  Voltar
-</button>
+      class="voltar"
+      onclick="window.location.href='../TelaInicial/index.html'">
+
+      Voltar
+
+    </button>
 
   </div>
 

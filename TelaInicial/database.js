@@ -328,7 +328,11 @@ function fecharModalErro() {
 }
 
 function redirecionarAposSucesso() {
-    // Salva no localStorage tambem para compatibilidade com TelaResult
+    // Salva no localStorage também para compatibilidade com TelaResult
+    if (typeof salvarDados === 'function') {
+        salvarDados();
+        return;
+    }
     window.location.href = "../TelaResult/Resultado.html";
 }
 

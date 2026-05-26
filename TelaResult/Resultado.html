@@ -11,6 +11,8 @@
 
 <body>
 
+  <div id="topRightPopup" class="top-right-popup hidden" aria-live="polite"></div>
+
   <div class="container">
 
     <!-- TOPO -->
@@ -306,8 +308,48 @@
       <div class="info-grid">
 
         <div class="linha">
+          <strong>Moradia</strong>
+          <span id="moradia"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Vínculos Familiares</strong>
+          <span id="vinculosFamiliares"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Acesso ao Trabalho</strong>
+          <span id="acessoAotrabalho"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Acesso à Saúde Pública</strong>
+          <span id="acessoASaudePublica"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Discriminação vivida</strong>
+          <span id="discriminacao"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Rede de Apoio Social</strong>
+          <span id="redeApoioSocial"></span>
+        </div>
+
+        <div class="linha">
           <strong>Estratégias de Enfrentamento</strong>
           <span id="estrategiasEnfrentamento"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Encaminhamentos Necessários</strong>
+          <span id="encaminhamentosNecessarios"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Observações Encaminhamentos</strong>
+          <span id="observacoesEncaminhamentos"></span>
         </div>
 
       </div>
@@ -329,13 +371,28 @@
         </div>
 
         <div class="linha">
-          <strong>Peso</strong>
-          <span id="peso"></span>
+          <strong>Frequência Cardíaca</strong>
+          <span id="frequenciaCardiaca"></span>
         </div>
 
         <div class="linha">
-          <strong>Frequência Cardíaca</strong>
-          <span id="frequenciaCardiaca"></span>
+          <strong>Frequência Respiratória</strong>
+          <span id="frequenciaRespiratoria"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Temperatura</strong>
+          <span id="temperatura"></span>
+        </div>
+
+        <div class="linha">
+          <strong>SpO₂</strong>
+          <span id="spo2"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Peso</strong>
+          <span id="peso"></span>
         </div>
 
         <div class="linha">
@@ -343,11 +400,163 @@
           <span id="altura"></span>
         </div>
 
+        <div class="linha">
+          <strong>IMC</strong>
+          <span id="imc"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Distribuição de Pele</strong>
+          <span id="distribucaoPele"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Acne</strong>
+          <span id="acne"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Oleosidade</strong>
+          <span id="oleosidade"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Queda Capilar</strong>
+          <span id="quedaCapilar"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Pulsos Periféricos</strong>
+          <span id="pulsosPerifericos"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Edema</strong>
+          <span id="edema"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Aterosclerose</strong>
+          <span id="aterosclerose"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Murmúrio Vesicular</strong>
+          <span id="murmurioVesicular"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Dispneia</strong>
+          <span id="dispneia"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Fígado Palpável</strong>
+          <span id="figadoPalpavel"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Náuseas/Vômitos</strong>
+          <span id="nauseasVomitos"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Tipo Anatômico</strong>
+          <span id="tipoAnatomico"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Corrimento</strong>
+          <span id="corrimento"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Micção</strong>
+          <span id="miccao"></span>
+        </div>
+
       </div>
 
     </div>
 
-    <!-- EXAMES -->
+    <!-- PREVENTIVOS -->
+    <div class="card">
+
+      <div class="card-header">
+        <h2>Avaliação de Órgãos e Prevenção</h2>
+      </div>
+
+      <div class="info-grid">
+
+        <div class="linha">
+          <strong>Situação - Mama</strong>
+          <span id="situacaoMama"></span>
+        </div>
+        <div class="linha">
+          <strong>Data / Resultado - Mama</strong>
+          <span id="dataMama"></span>
+        </div>
+        <div class="linha">
+          <strong>Observações - Mama</strong>
+          <span id="obsMama"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Situação - Mamografia</strong>
+          <span id="situacaoMamografia"></span>
+        </div>
+        <div class="linha">
+          <strong>Data / Resultado - Mamografia</strong>
+          <span id="dataMamografia"></span>
+        </div>
+        <div class="linha">
+          <strong>Observações - Mamografia</strong>
+          <span id="obsMamografia"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Situação - Papanicolau</strong>
+          <span id="situacaoPapanicolau"></span>
+        </div>
+        <div class="linha">
+          <strong>Data / Resultado - Papanicolau</strong>
+          <span id="dataPapanicolau"></span>
+        </div>
+        <div class="linha">
+          <strong>Observações - Papanicolau</strong>
+          <span id="obsPapanicolau"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Situação - PSA</strong>
+          <span id="situacaoPSA"></span>
+        </div>
+        <div class="linha">
+          <strong>Data / Resultado - PSA</strong>
+          <span id="dataPSA"></span>
+        </div>
+        <div class="linha">
+          <strong>Observações - PSA</strong>
+          <span id="obsPSA"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Situação - Avaliação Hepática</strong>
+          <span id="situacaoHepatica"></span>
+        </div>
+        <div class="linha">
+          <strong>Data / Resultado - Hepática</strong>
+          <span id="dataHepatica"></span>
+        </div>
+        <div class="linha">
+          <strong>Observações - Hepática</strong>
+          <span id="obsHepatica"></span>
+        </div>
+
+      </div>
+
+    </div>
+
     <div class="card">
 
       <div class="card-header">
@@ -360,10 +569,91 @@
           <strong>Hemograma</strong>
           <span id="hemograma"></span>
         </div>
+        <div class="linha">
+          <strong>Data / Resultado - Hemograma</strong>
+          <span id="dataHemograma"></span>
+        </div>
+        <div class="linha">
+          <strong>Observações - Hemograma</strong>
+          <span id="obsHemograma"></span>
+        </div>
 
         <div class="linha">
           <strong>Glicemia</strong>
           <span id="glicemia"></span>
+        </div>
+        <div class="linha">
+          <strong>Data / Resultado - Glicemia</strong>
+          <span id="dataGlicemia"></span>
+        </div>
+        <div class="linha">
+          <strong>Observações - Glicemia</strong>
+          <span id="obsGlicemia"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Perfil Lipídico</strong>
+          <span id="perfilLipidico"></span>
+        </div>
+        <div class="linha">
+          <strong>Data / Resultado - Perfil Lipídico</strong>
+          <span id="dataPerfilLipidico"></span>
+        </div>
+        <div class="linha">
+          <strong>Observações - Perfil Lipídico</strong>
+          <span id="obsPerfilLipidico"></span>
+        </div>
+
+        <div class="linha">
+          <strong>TGO/TGP</strong>
+          <span id="tgoTgp"></span>
+        </div>
+        <div class="linha">
+          <strong>Data / Resultado - TGO/TGP</strong>
+          <span id="dataTgoTgp"></span>
+        </div>
+        <div class="linha">
+          <strong>Observações - TGO/TGP</strong>
+          <span id="obsTgoTgp"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Prolactina</strong>
+          <span id="prolactina"></span>
+        </div>
+        <div class="linha">
+          <strong>Data / Resultado - Prolactina</strong>
+          <span id="dataProlactina"></span>
+        </div>
+        <div class="linha">
+          <strong>Observações - Prolactina</strong>
+          <span id="obsProlactina"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Estradiol/Testosterona</strong>
+          <span id="estradiolTestosterona"></span>
+        </div>
+        <div class="linha">
+          <strong>Data / Resultado - Estradiol/Testosterona</strong>
+          <span id="dataEstradiolTestosterona"></span>
+        </div>
+        <div class="linha">
+          <strong>Observações - Estradiol/Testosterona</strong>
+          <span id="obsEstradiolTestosterona"></span>
+        </div>
+
+        <div class="linha">
+          <strong>Creatinina</strong>
+          <span id="creatina"></span>
+        </div>
+        <div class="linha">
+          <strong>Data / Resultado - Creatinina</strong>
+          <span id="dataCreatina"></span>
+        </div>
+        <div class="linha">
+          <strong>Observações - Creatinina</strong>
+          <span id="obsCreatina"></span>
         </div>
 
       </div>
@@ -398,7 +688,122 @@
 
     </div>
 
-    <!-- PLANEJAMENTO -->
+      <!-- ACOMPANHAMENTO INTERPROFISSIONAL -->
+      <div class="card">
+
+        <div class="card-header">
+          <h2>Acompanhamento Interprofissional</h2>
+        </div>
+
+        <div class="info-grid">
+
+          <div class="linha">
+            <strong>Profissional</strong>
+            <span>Endocrinologia</span>
+          </div>
+          <div class="linha">
+            <strong>Status</strong>
+            <span id="statusEndocrinologia"></span>
+          </div>
+          <div class="linha">
+            <strong>Data</strong>
+            <span id="dataEndocrinologia"></span>
+          </div>
+          <div class="linha">
+            <strong>Plano / Observações</strong>
+            <span id="planoEndocrinologia"></span>
+          </div>
+
+          <div class="linha">
+            <strong>Profissional</strong>
+            <span>Psicologia</span>
+          </div>
+          <div class="linha">
+            <strong>Status</strong>
+            <span id="statusPsicologia"></span>
+          </div>
+          <div class="linha">
+            <strong>Data</strong>
+            <span id="dataPsicologia"></span>
+          </div>
+          <div class="linha">
+            <strong>Plano / Observações</strong>
+            <span id="planoPsicologia"></span>
+          </div>
+
+          <div class="linha">
+            <strong>Profissional</strong>
+            <span>Serviço Social</span>
+          </div>
+          <div class="linha">
+            <strong>Status</strong>
+            <span id="statusServicoSocial"></span>
+          </div>
+          <div class="linha">
+            <strong>Data</strong>
+            <span id="dataServicoSocial"></span>
+          </div>
+          <div class="linha">
+            <strong>Plano / Observações</strong>
+            <span id="planoServicoSocial"></span>
+          </div>
+
+          <div class="linha">
+            <strong>Profissional</strong>
+            <span>Nutrição</span>
+          </div>
+          <div class="linha">
+            <strong>Status</strong>
+            <span id="statusNutricao"></span>
+          </div>
+          <div class="linha">
+            <strong>Data</strong>
+            <span id="dataNutricao"></span>
+          </div>
+          <div class="linha">
+            <strong>Plano / Observações</strong>
+            <span id="planoNutricao"></span>
+          </div>
+
+          <div class="linha">
+            <strong>Profissional</strong>
+            <span>Fisioterapia</span>
+          </div>
+          <div class="linha">
+            <strong>Status</strong>
+            <span id="statusFisioterapia"></span>
+          </div>
+          <div class="linha">
+            <strong>Data</strong>
+            <span id="dataFisioterapia"></span>
+          </div>
+          <div class="linha">
+            <strong>Plano / Observações</strong>
+            <span id="planoFisioterapia"></span>
+          </div>
+
+          <div class="linha">
+            <strong>Profissional</strong>
+            <span>Outros</span>
+          </div>
+          <div class="linha">
+            <strong>Status</strong>
+            <span id="statusOutros"></span>
+          </div>
+          <div class="linha">
+            <strong>Data</strong>
+            <span id="dataOutros"></span>
+          </div>
+          <div class="linha">
+            <strong>Plano / Observações</strong>
+            <span id="planoOutros"></span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PLANEJAMENTO -->
     <div class="card">
 
       <div class="card-header">
